@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="main">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Be Fit & Fine</title>
+
+        <!-- Favicon -->
+    <link rel="icon" href="./img/favicon.png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/line-icons.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/nivo-lightbox.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/color-switcher.css">
+    <link rel="stylesheet" href="css/menu_sideslide.css">
+    <link rel="stylesheet" href="css/main.css">    
+    <link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+	<style> @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+*:focus {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #DDD;
+  font-size: 16px;
+  color: #222;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+#login-box {
+  position: relative;
+  margin: 8% auto;
+  width: 600px;
+  height: 500px;
+  background: #FFF;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 300px;
+  height: 400px;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  font-weight: 300;
+  font-size: 28px;
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 4px;
+  width: 220px;
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid #AAA;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-bottom: 2px solid #16a085;
+  color: #16a085;
+  transition: 0.2s ease;
+}
+
+input[type="submit"] {
+  margin-top: 28px;
+  width: 120px;
+  height: 32px;
+  background: #16a085;
+  border: none;
+  border-radius: 2px;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.1s ease;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  opacity: 0.8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+input[type="submit"]:active {
+  opacity: 1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+.or {
+  position: absolute;
+  top: 180px;
+  left: 280px;
+  width: 40px;
+  height: 40px;
+  background: #DDD;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  line-height: 40px;
+  text-align: center;
+}
+
+.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 300px;
+  height: 400px;
+  background: url('https://goo.gl/YbktSj');
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 2px 2px 0;
+}
+
+.right .loginwith {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #FFF;
+  text-align: center;
+}
+
+button.social-signin {
+  margin-bottom: 20px;
+  width: 220px;
+  height: 36px;
+  border: none;
+  border-radius: 2px;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+button.social-signin:hover,
+button.social-signin:focus {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+}
+
+button.social-signin:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+}
+
+button.social-signin.facebook {
+  background: #32508E;
+}
+
+button.social-signin.twitter {
+  background: #55ACEE;
+}
+
+button.social-signin.google {
+  background: #DD4B39;
+}</style>	
+
+</head>
+<body>
+
+    <div ng-view id="mainContent"></div>
+	<script src="./angular.js"></script>
+	<script src="./angular-route.js"></script>
+	<script src="./script.js"></script>
+	
+
+   
+
+    <!-- Header Area Start -->
+    <header class="header-area">
+        <div class="classy-nav-container breakpoint-off">
+            <div class="container">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar justify-content-between" id="conferNav">
+
+                    <!-- Logo -->
+                    <h3 style="color:white";>  <img src="./img/favicon.png"/ height="100"> Be Fit & Fine</h3>
+
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="classy-menu">
+                        <!-- Menu Close Button -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom">Be Fit & Fine</span></div>
+                        </div>
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul id="nav">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                   <li><a href="#">About Us</a>
+                                    <ul class="dropdown">
+							      <li><a href="aboutus.html">Be Fit & Fine</a></li>
+							      <li><a href="blog.html">Blogs</a></li>
+								  <li><a href="team.html">Our Team</a></li>
+								  <li><a href="subs.html">Subscribes</a></li> 
+                                 <li><a href="talk.html">Celebrity Talk</a></li>
+                                   <li><a href="test.html">Testimonial</a></li>	
+								   <li><a href="partner.html">Partners</a></li>	
+                                 
+                                  <li><a href="#">Join</a>
+                                             <ul class="dropdown">
+							      <li><a href="login.html">Login</a></li>
+								  <li><a href="register.html">Register</a></li> 
+                                 <li><a href="member.html">Membership</a></li>								  
+							    </ul>							  
+							 
+							     </li>
+								    </ul><li>
+                                     <li><a href="#">Personal Coach</a>
+                                    <ul class="dropdown">
+							      <li><a href="workout.html">Workout Plans</a></li>
+							      <li><a href="yoga.html">Yoga Routine</a></li>
+								  <li><a href="weight.html">Weight Loss</a></li>
+								  <li><a href="beauty.html">Beauty Care</a></li>
+								  <li><a href="diet.html">Diet Plans</a></li>              
+							    </ul></li>									 
+                                    
+                                 
+                              <li><a href="quiz.html">Health Quiz</a></li>
+							  <li><a href="contact.html">Contact</a></li>							  
+							      </ul>
+                                       </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+	<body >
+    <section id="trending" class="section"  >
+      <div class="container">
+             <div class="section-header">          
+            <h2 class="me"></h2>
+          </div>
+          <div class="row">          
+            <div class="col-lg-9 col-md-9 col-xs-12">
+              <div class="contact-block">
+                <form id="contactForm">
+                  <div class="row">
+                    
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input type="text" placeholder="Your Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
+                        <div class="help-block with-errors"></div>
+                      </div> 
+                    </div>
+                    
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <input type="text" placeholder="Your Password" id="addres" class="form-control" required data-error="Please enter your Password">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <div class="submit-button">
+                        <button class="btn btn-common btn-effect" id="submit" type="submit">Login</button>
+                        <div id="msgSubmit" class="h3 hidden"></div> 
+                        <div class="clearfix"></div> 
+                      </div>
+                    </div>
+                  </div>            
+                </form>
+              </div>
+            </div>
+            <div  class="col-lg-3 col-md-3 col-xs-12">
+              <div class="contact-deatils">
+                <!-- Content Info -->
+                <div class="contact-info_area">
+                  <div class="contact-info">
+                     <h5 style="color:black";>Location</h5>
+                    <p style="color:black";>Goarkhpur ,Uttar Pradesh</p>
+                  </div>
+                  <!-- Content Info -->
+                  <div class="contact-info">
+				          
+                    <h5 style="color:black";>E-mail</h5>
+                    <p style="color:black";>befitnfine365@gmail.com</p>
+                  </div>
+                  <!-- Content Info -->
+                  <div class="contact-info">
+                  
+                    <h5 style="color:black";>Phone</h5>
+                    <p style="color:black";>+48 123 456 789</p>
+                  </div>
+                  <!-- Icon -->
+				 <ul class="footer-social">
+                    <li><a class="facebook" href="https://m.facebook.com/kiran.saxena.3192479?ref=bookmarks"><i class="lni-facebook-filled"></i></a></li>
+                    <li><a class="twitter" href="https://twitter.com/befitnfine1"><i class="lni-twitter-filled"></i></a></li>
+                    <li><a class="linkedin" href="https://mail.google.com/mail/u/3/?pli=1"><i class="lni-linkedin-fill"></i></a></li>
+                    <li><a class="google-plus" href="https://www.instagram.com/befitnfine/?hl=en""><i class="lni-google-plus"></i></a></li>
+                  </ul> 
+				
+              
+          </div>
+				</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>            
+    </section>
+   <!-- Contact Section End -->
+ </body>       
+    <footer>
+      <section class="footer-Content" style="background-color:black";>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+              <h3 style="color:white";>Be Fit & Fine</h3>
+              <div class="textwidget">
+                <p style="color:white";>Be Fit & Fine is platform work on preventive health that can be manage through workout,
+proper diet etc..</p>
+              </div>
+			  <div class="social-lists">
+			  				 <ul class="footer-social">
+                    <li><a class="facebook" href="https://m.facebook.com/kiran.saxena.3192479?ref=bookmarks"><i class="lni-facebook-filled"></i></a></li>
+                    <li><a class="twitter" href="https://twitter.com/befitnfine1"><i class="lni-twitter-filled"></i></a></li>
+                    <li><a class="linkedin" href="https://mail.google.com/mail/u/3/?pli=1"><i class="lni-linkedin-fill"></i></a></li>
+                    <li><a class="google-plus" href="https://www.instagram.com/befitnfine/?hl=en""><i class="lni-google-plus"></i></a></li>
+                  </ul> 
+	<p style="color:white";>Number of Visitors</p>
+                <a href="https://www.webfreecounter.com/" target="_blank"><img src="https://www.webfreecounter.com/hit.php?id=zuuuoppx&nd=7&style=71" border="0" alt="web counter"></a>
+<!-- End of WebFreeCounter Code -->
+            </div>
+			</div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+              <div class="widget">
+                <h3 class="block-title" style="color:white";>You can also visist</h3>
+                <ul class="menu">
+                  <li ><a href="workout.html" style="color:white";>Workout PLans</a></li>
+                  <li ><a href="yoga.html" style="color:white";>Yoga  Routine</a></li>
+                  <li><a href="beauty.html" style="color:white";>Beauty Care</a></li>
+                  <li ><a href="weight.html" style="color:white";>Weight Loss</a></li>
+                  <li ><a href="diet.html" style="color:white";>Diet </a></li>
+                </ul>
+              </div>
+            </div> <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+              <div class="widget">
+                
+      				           
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+              <div class="widget">
+              
+
+           
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14013.878748802099!2d77.36999216937208!3d28.58568316897814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef7d7a0aed2f%3A0xc08e66a08281036!2sSector+72%2C+Noida%2C+Uttar+Pradesh!5e0!3m2!1sen!2sin!4v1554324444249!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>          
+                </div>
+            </div>
+			  </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    </footer>
+	<script type="text/javascript">function add_chatinline(){var hccid=71852229;var nt=document.createElement("script");nt.async=true;nt.src="https://mylivechat.com/chatinline.aspx?hccid="+hccid;var ct=document.getElementsByTagName("script")[0];ct.parentNode.insertBefore(nt,ct);}
+add_chatinline(); </script>
+	    <script src="js/jquery-min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/jquery.mixitup.js"></script>
+    <script src="js/nivo-lightbox.js"></script>
+    <script src="js/owl.carousel.js"></script>    
+    <script src="js/jquery.stellar.min.js"></script>    
+    <script src="js/jquery.nav.js"></script>    
+    <script src="js/scrolling-nav.js"></script>    
+    <script src="js/jquery.easing.min.js"></script>     
+    <script src="js/wow.js"></script> 
+    <script src="js/jquery.vide.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>    
+    <script src="js/jquery.magnific-popup.min.js"></script>    
+    <script src="js/waypoints.min.js"></script>    
+    <script src="js/form-validator.min.js"></script>
+    <script src="js/contact-form-script.js"></script>   
+    <script src="js/main.js"></script>
+	<script src="js/vendor/jquery-2.2.4.min.js"></script>
+			
+
+<script src="js/placeholders.min.js"></script> <!-- polyfill for the HTML5 placeholder attribute -->
+<script src="js/main1.js"></script> <!-- Resource JavaScript -->
+<!-- jQuery 2.2.4 -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Popper -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- All Plugins -->
+    <script src="js/confer.bundle.js"></script>
+    <!-- Active -->
+    <script src="js/default-assets/active.js"></script>
+
+</body>
+
+</html>
